@@ -201,7 +201,19 @@ struct disjoint_sets{
     }
 };
 
+//This program takes a graph as an input and gives weight of minimum spanning tree as output
+//No negative weights accepted
 
+//input format
+//n e   (where n is number of nodes and e is number of edges)
+//u v w  (There is an edge between u and v of weight w)
+/*
+Given 2 integers N and M. N represents the number of vertices in the graph. M represents the number of edges between any 2 vertices.
+Then M lines follow, each line has 3 space separated integers u, v and w where u and v represents an edge from a vertex u to a vertex v and w represents the weight of that edge.
+*/
+
+// input can also be given in file by following syntax
+// ./van_Emde_Boas < file_name.txt
 
 int main(){
 
@@ -269,7 +281,7 @@ int main(){
     }
     t = clock() - t;
 
-    //cout << mst_weight << endl << endl;
+    cout << mst_weight << endl << endl;
     double time_taken = ((double)t)/CLOCKS_PER_SEC;
     printf("%f\n", time_taken);
 
